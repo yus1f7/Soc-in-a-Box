@@ -1,0 +1,34 @@
+# Secrets - never commit these
+.env
+*.env
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.jks
+id_rsa*
+id_ed25519*
+secrets/
+**/certs/
+**/config/wazuh_indexer_ssl_certs/
+
+# Wazuh docker deployment: generated certificates and internal user hashes
+single-node/config/wazuh_indexer_ssl_certs/
+single-node/config/wazuh_indexer/internal_users.yml
+
+# VM images and exports
+*.vmdk
+*.vmx
+*.vmem
+*.vmsd
+*.vmsn
+*.ova
+*.ovf
+*.iso
+
+# Misc
+*.log
+*.swp
+.DS_Store
+Thumbs.db
