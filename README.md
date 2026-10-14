@@ -74,14 +74,11 @@ The indexer uses the most memory by far. Together the stack idles at about 2.3 G
 
 | # | Action I performed | Rule description | Rule ID | Level | Screenshot |
 |---|---|---|---|---|---|
-| 1 | Failed SSH login to ubuntu-web with a non-existent user from win-client | sshd: Attempt to login using a non-existent user | 5710 | 5 | [v1-1-failed-ssh.png](evidence/v1-1-failed-ssh.png) |
-| 2 | `sudo ls /root` on ubuntu-web | Successful sudo to ROOT executed. | 5402 | 3 | [v1-2-sudo.png](evidence/v1-2-sudo.png) |
-| 3 | `useradd testuser` on ubuntu-web | New user added to the system. | 5902 | 8 | [v1-3-new-user.png](evidence/v1-3-new-user.png) |
-| 4 | `cmd.exe /c echo TestSysmonEvent` from PowerShell on win-client | Sysmon process creation (event ID 1) | see screenshot | see screenshot | [v1-4-sysmon-process.png](evidence/v1-4-sysmon-process.png) |
-| 5 | Wrong password at the Windows login screen on win-client | Windows logon failure (event ID 4625) | see screenshot | see screenshot | [v1-5-failed-windows-logon.png](evidence/v1-5-failed-windows-logon.png) |
-
-> Levels for 1-3 are the Wazuh default levels for these rules. Rows 4 and 5: copy the exact rule description and level from the full alert (`rule.description`, `rule.level`) before submitting.
-
+| 1 | Failed SSH login to ubuntu-web with a non-existent user from win-client | `sshd: Attempt to login using a non-existent user` | 5710 | 5 | [v1-1-failed-ssh.png](evidence/v1-1-failed-ssh.png) |
+| 2 | `sudo ls /root` on ubuntu-web | `Successful sudo to ROOT executed.` | 5402 | 3 | [v1-2-sudo.png](evidence/v1-2-sudo.png) |
+| 3 | `useradd testuser` on ubuntu-web | `New user added to the system.` | 5902 | 8 | [v1-3-new-user.png](evidence/v1-3-new-user.png) |
+| 4 | `cmd.exe /c "echo TestSysmonEvent"` from PowerShell on win-client | `Sysmon - Event 1: Process creation` | 61603 | 3 | [v1-4-sysmon-process.png](evidence/v1-4-sysmon-process.png) |
+| 5 | Wrong password at the Windows login screen on win-client (Event ID 4625) | `Logon Failure - Unknown user name or bad password` | 60122 | 5 | [v1-5-failed-windows-logon.png](evidence/v1-5-failed-windows-logon.png) |
 ## Path of one event: from the endpoint to the alert (V2)
 
 Example: failed SSH login on ubuntu-web.
