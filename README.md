@@ -1,4 +1,4 @@
-# Soc-in-a-Box: Mini-SOC in a box (Blue Team Capstone)
+# Soc-in-a-Box: Mini-SOC in a box 
 
 LabShop is a small online shop with one web server and one staff PC and no security monitoring.
 This project builds a small Security Operations Centre (SOC) around **Wazuh**, step by step.
